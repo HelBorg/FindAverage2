@@ -34,8 +34,6 @@ public class DefaultAgent extends Agent {
             linkedAgents = new ArrayList<>();
         }
 
-        Random rand = new Random();
-//        currentValue = (double) rand.nextInt(50);
         currentValue = init.get(id);
 
         agentToNum = new HashMap<>();
