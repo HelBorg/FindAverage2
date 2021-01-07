@@ -12,6 +12,56 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
+        <jade.version>4.5.0</jade.version>
+        <lombok.version>1.18.10</lombok.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <apache.collections4.version>4.3</apache.collections4.version>
+        <common.codec.version>1.9</common.codec.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tilab.jade</groupId>
+            <artifactId>jade</artifactId>
+            <version>${jade.version}</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/jade-4.5.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${apache.collections4.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${common.codec.version}</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>com.guicedee.services</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>62</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
