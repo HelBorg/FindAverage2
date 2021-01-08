@@ -47,13 +47,14 @@ public class FindAverage extends TickerBehaviour {
 
         ACLMessage message = new ACLMessage(ACLMessage.INFORM);
         linkedAgents.forEach(agent -> {
-            if (Math.random() > 0.2) {
                 message.addReceiver(new AID(agent, AID.ISLOCALNAME));
-            }
         });
+
         Map<String, Double> contentToSend = new HashMap<String, Double>() {{
-            put(myAgent.getLocalName(), ((DefaultAgent) myAgent).getCurrentValue());
+            double randomAdd = 2 * Math.random() - 1;
+            put(myAgent.getLocalName(), ((DefaultAgent) myAgent).getCurrentValue() + randomAdd);
         }};
+
         try {
             message.setContentObject((Serializable) contentToSend);
         } catch (Exception e) {
